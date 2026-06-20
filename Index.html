@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tredegar.co.uk | The Digital Archive</title>
+    <style>
+        :root {
+            --primary: #0f2d4a;     /* Deep historic slate blue */
+            --accent: #c49a45;      /* Heritage gold */
+            --nhs-blue: #005eb8;    /* Official NHS blue tribute */
+            --dark: #22252a;        /* Body text */
+            --light: #f4f6f9;       /* Background grid */
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Top Navigation Header */
+        header {
+            background-color: var(--primary);
+            color: white;
+            border-bottom: 3px solid var(--accent);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+        }
+
+        .logo-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .tagline {
+            font-size: 0.8rem;
+            color: #a0aec0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.btn-login {
+            color: var(--accent);
+        }
+
+        nav a.btn-login {
+            border: 1px solid var(--accent);
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            background: rgba(196, 154, 69, 0.1);
+        }
+
+        /* Hero Welcome Showcase */
+        .hero {
+            background: linear-gradient(rgba(15, 45, 74, 0.85), rgba(15, 45, 74, 0.95)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #e2e8f0;
+            margin-bottom: 2rem;
+        }
+
+        /* Stats Counter Row */
+        .stats-bar {
+            background-color: white;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-top: -2.5rem;
+            border-radius: 8px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .stat-item h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            color: #718096;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Main Structural Layout */
+        .container {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2.5rem;
+        }
+
+        /* Left Side Content */
+        .main-content section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            margin-bottom: 2rem;
+            border: 1px solid #edf2f7;
+        }
+
+        h2.section-header {
+            color: var(--primary);
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 0.75rem;
+        }
+
+        /* NHS & Bevan Focus Style */
+        .nhs-banner {
+            background-color: #f0f7ff;
+            border-left: 5px solid var(--nhs-blue) !important;
+            padding: 2rem;
+        }
+
+        .nhs-badge {
+            background-color: var(--nhs-blue);
+            color: white;
+            padding: 0.25rem 0.7rem;
+            font-weight: bold;
+            font-size: 0.85rem;
+            border-radius: 3px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        /* Right Side Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            margin-bottom: 2rem;
+            border: 1px solid #edf2f7;
+        }
+
+        .sidebar-widget h3 {
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Digital History Timeline List */
+        .history-list {
+            list-style: none;
+        }
+
+        .history-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .history-list li::before {
+            content: "•";
+            color: var(--accent);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -0.2rem;
+        }
+
+        .history-list strong {
+            color: var(--primary);
+        }
+
+        /* Footer Element */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 6rem;
+            border-top: 4px solid var(--accent);
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-notes {
+            font-size: 0.85rem;
+            color: #a0aec0;
+            max-width: 600px;
+        }
+
+        .footer-rights {
+            font-size: 0.9rem;
+            color: white;
+            font-weight: 500;
+        }
+
+        /* Modal Login Window CSS Styling */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 2000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(15, 45, 74, 0.8);
+            backdrop-filter: blur(4px);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            position: relative;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 1.5rem;
+            top: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #a0aec0;
+        }
+
+        .close-btn:hover {
+            color: var(--dark);
+        }
+
+        .modal h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #4a5568;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(15, 45, 74, 0.15);
+        }
+
+        .login-submit {
+            width: 100%;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .login-submit:hover {
+            background-color: #1a436d;
+        }
+
+        /* Responsive Layout Tweak */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .stats-bar {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-top: -1rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            nav a {
+                margin: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation Section -->
+    <header>
+        <div class="nav-container">
+            <div class="logo-group">
+                <a href="#" class="logo">WWW.TREDEGAR.CO.UK<span>™</span></a>
+                <div class="tagline">The Digital Archive of Tredegar</div>
+            </div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#history">Historical Roots</a>
+                <a href="#" onclick="openLoginModal()" class="btn-login">Admin Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Hero Brand Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>The Historic Town of Tredegar</h1>
+            <p>Welcome to the definitive, largest, and longest-running digital source of information on the great town of Tredegar across the World Wide Web.</p>
+        </div>
+    </section>
+
+    <!-- Media Asset Live Counter Bar -->
+    <div class="stats-bar">
+        <div class="stat-item">
+            <h2>10,000+</h2>
+            <p>Historic Photographs</p>
+        </div>
+        <div class="stat-item">
+            <h2>600+</h2>
+            <p>Community Videos</p>
+        </div>
+        <div class="stat-item">
+            <h2>Est. 1991</h2>
+            <p>Digital Legacy</p>
+        </div>
+    </div>
+
+    <!-- Layout Container Split -->
+    <div class="container">
+        
+        <!-- Left Column: Prime Historical Narratives -->
+        <main class="main-content">
+            
+            <section id="about">
+                <h2 class="section-header">Our Digital Journey</h2>
+                <p>Established as a historical pillar of Welsh internet history, this platform is the largest source of media and documentation dedicated to Tredegar. From its inception as an academic node to its current evolution as a static archive repository, our mission remains to safeguard the incredible stories, industrial triumphs, and social movements of our valley town.</p>
+            </section>
+
+            <section class="nhs-banner">
+                <span class="nhs-badge">NHS Heritage Site</span>
+                <h2 class="section-header" style="border-left-color: var(--nhs-blue);">Aneurin Bevan & The Birth of the NHS</h2>
+                <p>Tredegar stands globally recognized as the true crucible of modern social healthcare. It was right here that <strong>Aneurin "Nye" Bevan</strong> structuralized his vision for the British National Health Service (NHS). Drawing direct institutional blueprint designs from the community-funded <em>Tredegar Medical Aid Society</em>, Bevan ensured that medical support would be free at the point of delivery for an entire nation.</p>
+            </section>
+
+            <section id="forum">
+                <h2 class="section-header">Community Forums & Archive</h2>
+                <p>Our classic chat and community forums served for years as a vital digital meeting grounds for local residents and the global Tredegar diaspora. While the traditional live forum databases are undergoing migration to prevent structural spam, the core conversational memories, threads, and photo entries remain protected within our architectural storage banks.</p>
+            </section>
+
+        </main>
+
+        <!-- Right Column: Site Lineage Timeline Details -->
+        <aside class="sidebar">
+            
+            <div class="sidebar-widget" id="history">
+                <h3>Our Architecture Lineage</h3>
+                <ul class="history-list">
+                    <li>
+                        <strong>1991 – 1994:</strong> Founded on the academic <strong>JANET System</strong> (Joint Academic Network) node architecture.
+                    </li>
+                    <li>
+                        <strong>1994 – 1998:</strong> Maintained and operated as a local community Dial-up <strong>BBS (Bulletin Board System)</strong> network.
+                    </li>
+                    <li>
+                        <strong>1998 – Present:</strong> Launched officially onto the modern <strong>World Wide Web (WWW)</strong> framework.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Archive Access</h3>
+                <p style="font-size: 0.9rem; color: #4a5568;">The massive photography collection (10k+) and film reels (600+) are hosted directly within secure back-end directory trees. Private administrative authorization is mandatory for back-end modifications.</p>
+            </div>
+
+        </aside>
+    </div>
+
+    <!-- Footer System Configuration -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-notes">
+                <p><strong>Legal Notice & Architecture Statement:</strong> This is a strictly private website. All legacy archives, records, and domains are held under secure preservation. Unauthorized data-scraping of database mirrors is strictly prohibited.</p>
+                <p style="margin-top: 0.5rem; color: #718096;">&copy; 1991 - 2026 WWW.TREDEGAR.CO.UK. All rights reserved.</p>
+            </div>
+            <div class="footer-rights">
+                <a href="#" onclick="openLoginModal()" style="color: var(--accent); text-decoration: none; font-weight: bold; border-bottom: 1px dashed var(--accent);">System Administrator Login</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactive Login Modal Dynamic Display -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeLoginModal()">&times;</span>
+            <h3>Private Admin Login</h3>
+            <form onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="username">Administrative Username</label>
+                    <input type="text" id="username" required autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Security Password</label>
+                    <input type="password" id="password" required autocomplete="current-password">
+                </div>
+                <button type="submit" class="login-submit">Authenticate System</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Interactive functions to trigger visual popups
+        function openLoginModal() {
+            document.getElementById('loginModal').style.display = 'flex';
+        }
+
+        function closeLoginModal() {
+            document.getElementById('loginModal').style.display = 'none';
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            alert("System Notice: Access Denied. This administrative login panel requires matching localized SSH encryption keys linked to the repository.");
+            closeLoginModal();
+        }
+
+        // Close window if clicking background mask
+        window.onclick = function(event) {
+            var modal = document.getElementById('loginModal');
+            if (event.target == modal) {
+                closeLoginModal();
+            }
+        }
+    </script>
+
+</body>
+</html>
+

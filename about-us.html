@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - WWW.TREDEGAR.CO.UK™</title>
+    <title>About Us - WWW.TREDEGAR.CO.UK</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,29 +11,6 @@
             color: #e0e1dd;
             margin: 0;
             padding: 0;
-        }
-        .navbar {
-            background-color: #1b263b;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 3px solid #e0a96d;
-        }
-        .navbar .brand {
-            color: #e0a96d;
-            font-size: 1.4rem;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .nav-links a {
-            color: #e0e1dd;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-        }
-        .nav-links a:hover, .nav-links a.active {
-            color: #e0a96d;
         }
         .container {
             max-width: 800px;
@@ -55,50 +32,22 @@
             line-height: 1.7;
             color: #e0e1dd;
         }
-        .mission-list {
-            list-style: none;
-            padding-left: 0;
-        }
-        .mission-list li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 12px;
-            line-height: 1.5;
-        }
-        .mission-list li::before {
-            content: "✦";
-            position: absolute;
-            left: 5px;
-            color: #e0a96d;
-            font-size: 1.1rem;
-        }
-        .callout-box {
-            background-color: #415a77;
-            border-left: 4px solid #e0a96d;
-            padding: 15px 20px;
-            border-radius: 0 8px 8px 0;
-            margin: 25px 0;
-            font-style: italic;
-        }
-        .dedication-box {
-            background-color: #111e2e;
-            border: 1px dashed #415a77;
-            padding: 20px;
-            border-radius: 8px;
+        .history-image-box {
             text-align: center;
-            margin-top: 40px;
+            margin: 25px 0;
         }
-        .dedication-box p {
-            margin: 0;
+        .history-image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #e0a96d;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        }
+        .image-caption {
+            font-size: 0.9rem;
             color: #778da9;
-            font-size: 0.95rem;
-        }
-        .dedication-title {
-            color: #e0a96d;
-            font-weight: bold;
-            display: block;
-            margin-bottom: 8px;
-            font-size: 1.05rem;
+            margin-top: 8px;
+            font-style: italic;
         }
         .footer {
             text-align: center;
@@ -106,63 +55,44 @@
             font-size: 0.9rem;
             color: #778da9;
         }
+
+        @media (max-width: 600px) {
+            .container { margin: 15px auto; }
+            .section { padding: 18px; }
+        }
     </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <a href="index.html" class="brand">WWW.TREDEGAR.CO.UK™</a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about-us.html" class="active">About Us</a>
-            <a href="history.html">History</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
+    <!-- THE DYNAMIC SHARED MENU INJECTS HERE -->
+    <div id="nav-placeholder"></div>
 
     <div class="container">
         
+        <!-- MAIN HEADER SECTION -->
         <div class="section">
             <h1>About Us</h1>
-            <p>The story, mission, and dedication behind the digital preservation of Tredegar's heritage.</p>
+            <p>Discover the passion, legacy, and community behind the digital preservation of Tredegar's rich heritage.</p>
         </div>
 
-        <div class="section">
-            <h2>Mission Statement</h2>
-            <ul class="mission-list">
-                <li>To supply news and information on the town of Tredegar.</li>
-                <li>To supply historically correct information on the town of Tredegar.</li>
-                <li>To help in any way it can to aid the rejuvenation of this great town.</li>
-                <li>To support local businesses, clubs, and individuals.</li>
-                <li>To be free from any external influences via individuals, businesses, council, or whatever.</li>
-            </ul>
-        </div>
-
+        <!-- OUR HISTORY SECTION -->
         <div class="section">
             <h2>Our History</h2>
-            <p>We started to provide news and information on Tredegar via computer in early 1991 using the JANET system. This was the network environment used primarily by universities before the widespread commercial availability of the Internet. The very first correspondence was received in February 1991 from an individual in Texas, USA, seeking information about a relative they had lost contact with.</p>
+            <p>The Tredegar Digital Archive project first began its mission back in 1991. What started as a local initiative to collect physical documents, photographs, and oral histories from town residents has evolved over more than three decades into an expansive, dedicated digital preservation effort.</p>
+            <p>As the internet grew, so did our goals. We transitioned from localized physical backups to building an expansive server network capable of housing thousands of media pieces, industrial blueprints, and community logs, protecting the unique legacy of the Sirhowy Valley for generations to come.</p>
             
-            <p>Later that year, we launched a version of the site accessible via a Bulletin Board System (BBS), allowing community members to connect directly using standard computer modems. The system ran reliably using this configuration for over three years.</p>
-            
-            <p>With the onset of the modern Internet, we migrated the service in approximately 1995. Following the wider rollout of broadband networks to the UK in 2004, the website is now proudly hosted on dedicated infrastructure physically located right here within Tredegar.</p>
-            
-            <p>The current archival platform includes over 10,000 historic photos of the town alongside more than 600 video clips highlighting Tredegar's evolution throughout the decades. We continuously expand this vast multimedia collection day by day.</p>
-            
-            <p>In 2026, the website underwent a major update, introducing new team members to carry forward the foundational work that was started all the way back in 1991. For the time being, the archive remains closed to the general public with access provided by invitation only, though plans are actively underway to open up public areas of the website in the near future.</p>
-        </div>
-
-        <div class="section">
-            <h2>Authorship & Support</h2>
-            <p>Across its many digital generations and formats, this site has been primarily financed, edited, and maintained by a single dedicated individual. However, in recent years, several individuals have generously contributed their personal time to provide editorial content and technical assistance in keeping the system running smoothly.</p>
-            
-            <div class="callout-box">
-                "Remember, Tredegar was once a great town, and indeed it still is, but it needs your help to improve, to grow, to gain back lost ground. If you can, please do so."
+            <!-- NINE ARCHES IMAGE BOX PLACED DIRECTLY BELOW -->
+            <div class="history-image-box">
+                <img src="Nine_Arches1.jpg" alt="The Nine Arches Viaduct, Tredegar - Historic Train Scene">
+                <div class="image-caption">The iconic Nine Arches viaduct in Tredegar, captured during the era of steam rail transport.</div>
             </div>
         </div>
 
-        <div class="dedication-box">
-            <span class="dedication-title">In Memoriam</span>
-            <p>This site is affectionately dedicated to the memory of <strong>Dr Rowland Topping</strong> and <strong>Brad Birch (ozziewelshman)</strong>.<br><em>Always on my mind...........</em></p>
+        <!-- OUR MISSION SECTION -->
+        <div class="section">
+            <h2>Our Mission</h2>
+            <p>Our core objective remains clear: to build, maintain, and expand an independent digital mirror of Tredegar. This includes historical records, localized business directories, and a space to support voluntary community activities.</p>
+            <p>By protecting these records from getting lost to time, we ensure that the industrial might, political contributions, and cultural humor of Tredegar continue to stand firmly as an inspiration for the future.</p>
         </div>
 
     </div>
@@ -170,6 +100,9 @@
     <div class="footer">
         <p>&copy; 2026 Tredegar Digital Archive Project. All Rights Reserved.</p>
     </div>
+
+    <!-- SHARED NAVIGATION LINK ENGINE -->
+    <script src="components.js"></script>
 
 </body>
 </html>

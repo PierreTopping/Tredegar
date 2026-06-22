@@ -12,40 +12,6 @@
             margin: 0;
             padding: 0;
         }
-        /* Mobile-friendly flexible navbar */
-        .navbar {
-            background-color: #1b263b;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            border-bottom: 3px solid #e0a96d;
-        }
-        .navbar .brand {
-            color: #e0a96d;
-            font-size: 1.4rem;
-            font-weight: bold;
-            text-decoration: none;
-            white-space: nowrap;
-        }
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .nav-links a {
-            color: #e0e1dd;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 5px 10px;
-            border-radius: 4px;
-        }
-        .nav-links a:hover {
-            color: #e0a96d;
-            background-color: rgba(224, 169, 109, 0.1);
-        }
         .container {
             max-width: 800px;
             margin: 30px auto;
@@ -92,22 +58,8 @@
             color: #778da9;
         }
 
-        /* Mobile Layout Adaptations */
+        /* Mobile Adjustments for Container */
         @media (max-width: 600px) {
-            .navbar {
-                flex-direction: column;
-                text-align: center;
-                padding: 12px;
-            }
-            .nav-links {
-                justify-content: center;
-                width: 100%;
-                gap: 8px;
-            }
-            .nav-links a {
-                font-size: 0.95rem;
-                padding: 8px 12px; /* Bigger touch targets for mobile fingers */
-            }
             .container {
                 margin: 15px auto;
             }
@@ -119,16 +71,8 @@
 </head>
 <body>
 
-    <!-- MAIN NAVIGATION (TM Removed & Responsive Layout Fixed) -->
-    <nav class="navbar">
-        <a href="index.html" class="brand">WWW.TREDEGAR.CO.UK</a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about-us.html">About Us</a>
-            <a href="history.html">History</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
+    <!-- THE DYNAMIC MENU DROPS RIGHT HERE -->
+    <div id="nav-placeholder"></div>
 
     <div class="container">
         
@@ -183,6 +127,9 @@
     <div class="footer">
         <p>&copy; 2026 Tredegar Digital Archive Project. All Rights Reserved.</p>
     </div>
+
+    <!-- INJECT NAVIGATION & STYLES FROM COMPONENT FILE -->
+    <script src="components.js"></script>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WWW.TREDEGAR.CO.UK™ - Digital Archive</title>
+    <title>WWW.TREDEGAR.CO.UK - Digital Archive</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,12 +12,15 @@
             margin: 0;
             padding: 0;
         }
+        /* Mobile-friendly flexible navbar */
         .navbar {
             background-color: #1b263b;
             padding: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
             border-bottom: 3px solid #e0a96d;
         }
         .navbar .brand {
@@ -25,15 +28,23 @@
             font-size: 1.4rem;
             font-weight: bold;
             text-decoration: none;
+            white-space: nowrap;
+        }
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
         }
         .nav-links a {
             color: #e0e1dd;
             text-decoration: none;
-            margin-left: 20px;
             font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 4px;
         }
         .nav-links a:hover {
             color: #e0a96d;
+            background-color: rgba(224, 169, 109, 0.1);
         }
         .container {
             max-width: 800px;
@@ -54,7 +65,6 @@
         p {
             line-height: 1.6;
         }
-        /* Vertical line removed entirely */
         .collection-text {
             font-size: 1.1rem;
             line-height: 1.7;
@@ -81,13 +91,37 @@
             font-size: 0.9rem;
             color: #778da9;
         }
+
+        /* Mobile Layout Adaptations */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+                padding: 12px;
+            }
+            .nav-links {
+                justify-content: center;
+                width: 100%;
+                gap: 8px;
+            }
+            .nav-links a {
+                font-size: 0.95rem;
+                padding: 8px 12px; /* Bigger touch targets for mobile fingers */
+            }
+            .container {
+                margin: 15px auto;
+            }
+            .section {
+                padding: 18px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- MAIN NAVIGATION -->
+    <!-- MAIN NAVIGATION (TM Removed & Responsive Layout Fixed) -->
     <nav class="navbar">
-        <a href="index.html" class="brand">WWW.TREDEGAR.CO.UK™</a>
+        <a href="index.html" class="brand">WWW.TREDEGAR.CO.UK</a>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="about-us.html">About Us</a>
@@ -106,7 +140,7 @@
             <p>This independent platform serves as a digital mirror for our community's passion and humor. We provide localized historical records, business directories, and support for voluntary activities, alongside the long-standing Tredegar forums.</p>
         </div>
 
-        <!-- DIGITAL MEDIA COLLECTION (Vertical line completely removed) -->
+        <!-- DIGITAL MEDIA COLLECTION -->
         <div class="section">
             <h2>🗄️ Our Digital Media Collection</h2>
             <p class="collection-text">
@@ -130,7 +164,7 @@
             </p>
         </div>
 
-        <!-- RESTORED PRIVATE SITE / INVITATION STATUS NOTICE -->
+        <!-- PRIVATE SITE / INVITATION STATUS NOTICE -->
         <div class="section" style="text-align: center;">
             <h2>🔒 Private System Archive Notice</h2>
             <p>In 2026, the website layout was updated, and new team members were added to continue the archiving work that first started back in 1991. <strong>For now, the system remains closed to the general public, and access is strictly via invitation only.</strong> It is planned to open up public sectors of the website in the near future.</p>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Admin Portal - WWW.TREDEGAR.CO.UK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d1b2a;
+            color: #e0e1dd;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .section {
+            background-color: #1b263b;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        h1, h2, h3 {
+            color: #e0a96d;
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.6;
+            color: #e0e1dd;
+        }
+        /* Lock Screen Styles */
+        #gate-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0;
+            border: 1px solid #415a77;
+            background-color: #0d1b2a;
+            color: #e0e1dd;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 1.1rem;
+            box-sizing: border-box;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #e0a96d;
+            color: #0d1b2a;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .btn:hover {
+            background-color: #f0c99d;
+        }
+        .btn-secondary {
+            background-color: #415a77;
+            color: #e0e1dd;
+        }
+        .btn-secondary:hover {
+            background-color: #778da9;
+        }
+        /* Admin Content Sheet (Hidden by default) */
+        #admin-content {
+            display: none;
+            text-align: left;
+        }
+        ul {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #778da9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- GATE LOCK SCREEN -->
+        <div class="section" id="gate-container">
+            <h1>System Entry</h1>
+            <p>Please enter the authorization passkey to open up administrative management tools.</p>
+            <input type="password" id="passkey" placeholder="••••••••" onkeypress="handleKeyPress(event)">
+            <button class="btn" onclick="checkGate()">Verify Authorization</button>
+            <a href="index.html" class="btn btn-secondary">Return to Homepage</a>
+        </div>
+
+        <!-- PROTECTED TEAM AREA -->
+        <div class="section" id="admin-content">
+            <h1>Staff Dashboard</h1>
+            <p>Welcome back to the system framework panel.</p>
+            <hr style="border-color: #415a77; margin: 20px 0;">
+
+            <h3>📁 GitHub Management Shortcuts</h3>
+            <p>Use these buttons to quickly access file drop-boxes directly inside GitHub on your phone:</p>
+            
+            <a href="https://github.com/" target="_blank" class="btn">Go directly to Media Upload Engine</a>
+            <a href="https://github.com/" target="_blank" class="btn btn-secondary">Review Code Commit Logs</a>
+
+            <hr style="border-color: #415a77; margin: 20px 0;">
+
+            <h3>📝 Archiving Guidelines</h3>
+            <ul>
+                <li><strong>Images:</strong> Clean up dust/scratches if possible, crop borders tightly, and save files as lowercase `.jpg`.</li>
+                <li><strong>Maps:</strong> File name structure must start with `Map_` followed by description (e.g., `Map_Old4.jpg`).</li>
+                <li><strong>Videos:</strong> Ensure any video file added is web-optimized for fast playback on mobile networks.</li>
+            </ul>
+            
+            <button class="btn btn-secondary" style="margin-top: 20px;" onclick="lockDashboard()">Log Out</button>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 Tredegar Digital Archive Project. All Rights Reserved.</p>
+    </div>
+
+    <!-- OBFUSCATED SECURITY CORE -->
+    <script>
+        var _0x19a2=['\x54\x72\x65\x64\x65\x67\x61\x72\x31\x39\x39\x31','\x76\x61\x6c\x75\x65','\x70\x61\x73\x73\x6b\x65\x79','\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x7a\x49\x64','\x67\x61\x74\x65\x2d\x63\x6f\x6e\x74\x61\x69\x6e\x65\x72','\x73\x74\x79\x6c\x65','\x64\x69\x73\x70\x6c\x61\x7a','\x6e\x6f\x6e\x65','\x61\x64\x6d\x69\x6e\x2d\x63\x6f\x6e\x74\x65\x6e\x74','\x62\x6c\x6f\x63\x6b','\x49\x6e\x76\x61\x6c\x69\x64\x20\x41\x75\x74\x68\x6f\x72\x69\x7a\x61\x74\x69\x6f\x6e\x20\x4b\x65\x79\x2e','\x6b\x65\x79\x43\x6f\x64\x65'];(function(_0x323b61,_0x19a245){var _0x4c2b9a=function(_0x553093){while(--_0x553093){_0x323b61['\x70\x75\x73\x68'](_0x323b61['\x73\x68\x69\x66\x74']());}};_0x4c2b9a(++_0x19a245);}(_0x19a2,0xbb));var _0x4c2b=function(_0x323b61,_0x19a245){_0x323b61=_0x323b61-0x0;var _0x4c2b9a=_0x19a2[_0x323b61];return _0x4c2b9a;};function checkGate(){var _0x3b1675=document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x44\x64'](_0x4c2b('0x0'))[_0x4c2b('0x1')];if(_0x3b1675===_0x4c2b('0x2')){document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x44\x64'](_0x4c2b('0x3'))[_0x4c2b('0x4')][_0x4c2b('0x5')]=_0x4c2b('0x6');document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x44\x64'](_0x4c2b('0x7'))[_0x4c2b('0x4')][_0x4c2b('0x5')]=_0x4c2b('0x8');}else{alert(_0x4c2b('0x9'));}}function handleKeyPress(_0x3da4ef){if(_0x3da4ef[_0x4c2b('0xa')]===0xd){checkGate();}}function lockDashboard(){document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x44\x64'](_0x4c2b('0x0'))[_0x4c2b('0x1')]='';document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x44\x64'](_0x4c2b('0x7'))[_0x4c2b('0x4')][_0x4c2b('0x5')]=_0x4c2b('0x6');document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x44\x64'](_0x4c2b('0x3'))[_0x4c2b('0x4')][_0x4c2b('0x5')]=_0x4c2b('0x8');}
+    </script>
+
+</body>
+</html>

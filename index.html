@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -54,22 +54,36 @@
         p {
             line-height: 1.6;
         }
-        .stats-box {
-            display: flex;
-            justify-content: space-around;
-            background-color: #415a77;
-            padding: 15px;
-            border-radius: 6px;
+        /* Statistics Layout Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
             margin-top: 20px;
         }
-        .stat-item {
+        .stat-card {
+            background-color: #415a77;
+            padding: 12px;
+            border-radius: 6px;
             text-align: center;
+            border-bottom: 2px solid #e0a96d;
         }
-        .stat-number {
-            font-size: 1.5rem;
+        .stat-val {
+            font-size: 1.3rem;
             font-weight: bold;
             color: #e0a96d;
             display: block;
+        }
+        .stat-lbl {
+            font-size: 0.85rem;
+            color: #e0e1dd;
+        }
+        .timestamp {
+            font-size: 0.8rem;
+            color: #778da9;
+            text-align: center;
+            margin-top: 10px;
+            font-style: italic;
         }
         .admin-btn {
             display: inline-block;
@@ -100,7 +114,7 @@
         <a href="index.html" class="brand">WWW.TREDEGAR.CO.UK™</a>
         <div class="nav-links">
             <a href="index.html">Home</a>
-             <a href="about-us.html">About Us</a>
+            <a href="about-us.html">About Us</a>
             <a href="history.html">History</a>
             <a href="contact.html">Contact</a>
         </div>
@@ -110,33 +124,43 @@
         
         <!-- MAIN WELCOME SECTION -->
         <div class="section">
-            <h1>Welcome to the Tredegar Digital Archive</h1>
-            <p>Resurrecting and preserving the rich digital layout and historical records of Tredegar. Explore our extensive media collections charting the legacy of our historic town.</p>
-            
-            <div class="stats-box">
-                <div class="stat-item">
-                    <span class="stat-number">10,000+</span>
-                    <span>Photos</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">600+</span>
-                    <span>Videos</span>
-                </div>
-            </div>
+            <h1>Welcome to the Home Site of Tredegar</h1>
+            <p>Tredegar is a vibrant valley town with a unique history and a population of around 11,000. It is situated in the South of Wales, 156 miles west of London and 30 miles north of Cardiff. The town has thrived for more than 200 years, its rich heritage fundamentally shaped by heavy industry—particularly iron and coal.</p>
+            <p>Today, after years of industrial decline, Tredegar is a community looking forward, actively building toward a brighter future by honoring and standing firmly upon the legacy of what came before.</p>
+            <p>This independent platform serves as a digital mirror for our community's passion and humor. We provide localized historical records, business directories, and support for voluntary activities, alongside the long-standing Tredegar forums and our custom online weather station network.</p>
         </div>
 
-        <!-- NHS TRIBUTE SECTION WITH HISTORIC IMAGE -->
+        <!-- NEW SYSTEM METRICS FROM ARCHIVE LOGS -->
+        <div class="section">
+            <h2>📊 Historical Platform Legacy Stats</h2>
+            <p>To highlight the vast reach of our digital archiving efforts over the decades, look at the staggering data footprint compiled by our independent network servers:</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card"><span class="stat-val">4,087,716</span><span class="stat-lbl">Visitors Since 2003</span></div>
+                <div class="stat-card"><span class="stat-val">3,364,086</span><span class="stat-lbl">Archived Picture Views</span></div>
+                <div class="stat-card"><span class="stat-val">7,487,071</span><span class="stat-lbl">Forum Page Views</span></div>
+                <div class="stat-card"><span class="stat-val">99,234</span><span class="stat-lbl">Total Forum Posts</span></div>
+                <div class="stat-card"><span class="stat-val">6,792</span><span class="stat-lbl">Photos Hosted</span></div>
+                <div class="stat-card"><span class="stat-val">221</span><span class="stat-lbl">Video Clips Hosted</span></div>
+                <div class="stat-card"><span class="stat-val">200,311</span><span class="stat-lbl">Video Clip Views</span></div>
+                <div class="stat-card"><span class="stat-val">1.9 TB</span><span class="stat-lbl">Total Data Displayed</span></div>
+            </div>
+            <div class="timestamp">Archival traffic snapshot captured: 30-01-2014</div>
+        </div>
+
+        <!-- NOTABLE RESIDENTS & NHS TRIBUTE -->
         <div class="section" style="text-align: center;">
-            <h2>Aneurin "Nye" Bevan</h2>
-            <h3>Father of the NHS</h3>
+            <h2>Famous Sons of Tredegar</h2>
+            <p style="text-align: left; margin-bottom: 20px;">Tredegar has been the birthplace and home to several world-renowned figures who left massive marks on culture and society, including political leader <strong>Neil Kinnock</strong> and legendary snooker champion <strong>Ray Reardon</strong>.</p>
+            
+            <h3>Aneurin "Nye" Bevan</h3>
+            <p>By far the most famous individual to rise from our valley hills was Aneurin Bevan.</p>
             
             <!-- Your uploaded historic image -->
             <img src="bevan.jpg" alt="Nye Bevan - Founder of the NHS" style="max-width: 100%; height: auto; border-radius: 8px; border: 2px solid #e0a96d; margin: 15px 0;">
             
             <p style="text-align: left;">
-                Born right here in Tredegar, Aneurin Bevan spearheaded the creation of the National Health Service in 1948. 
-                He famously based its revolutionary structure directly on the local Tredegar Medical Aid Society, ensuring that 
-                the care principles pioneered by our town's miners became the blueprint for healthcare across the entire nation.
+                As a young miner working directly in local pits, Bevan witnessed firsthand how the community pooled resources to build the <strong>Tredegar Medical Aid Society</strong>. When he went on to become Minister of Health, he weaponized that miniature, community-run model to construct the entire blueprint for the British National Health Service (NHS) in 1948—giving healthcare to the world from the heart of Tredegar.
             </p>
         </div>
 
@@ -144,7 +168,6 @@
         <div class="section" style="text-align: center; border-top: 2px dashed #415a77;">
             <h2>Restricted Access Area</h2>
             <p>Authorized access portal for the vertical timeline logs, media management, and administrative configurations.</p>
-            <!-- Points securely to your encrypted admin dashboard -->
             <a href="admin.html" class="admin-btn">System Administrator Login</a>
         </div>
 

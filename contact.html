@@ -23,7 +23,7 @@
             border-radius: 8px;
             margin-bottom: 25px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            text-align: center; /* Centers all main headers and text */
+            text-align: center;
         }
         h1, h2 {
             color: #e0a96d;
@@ -33,8 +33,15 @@
             line-height: 1.7;
             color: #e0e1dd;
         }
+        .notice-text {
+            border-top: 1px solid #415a77;
+            padding-top: 15px;
+            margin-top: 15px;
+            font-size: 0.95rem;
+            color: #778da9;
+        }
         
-        /* Centered Outer Display Card (Matches your Light Box setup) */
+        /* Centered Outer Display Card */
         .email-card-container {
             background-color: rgba(65, 90, 119, 0.2);
             border: 1px solid #415a77;
@@ -45,7 +52,7 @@
             box-sizing: border-box;
         }
         
-        /* The Dark Inner Email Button Panel - Fully Responsive & Perfectly Centered */
+        /* The Dark Inner Email Button Panel */
         .email-display-box {
             background-color: #0d1b2a;
             border: 2px solid #e0a96d;
@@ -53,7 +60,7 @@
             padding: 15px;
             margin: 20px auto 0 auto;
             max-width: 100%;
-            width: 320px; /* Safe mobile baseline width */
+            width: 320px;
             box-sizing: border-box;
             box-shadow: 0 4px 10px rgba(0,0,0,0.4);
         }
@@ -72,7 +79,7 @@
             font-size: 1.1rem;
             font-weight: bold;
             text-decoration: none;
-            word-break: break-all; /* Prevents overflow on ultra-small screens */
+            word-break: break-all;
         }
         .email-address:hover {
             color: #f0c99d;
@@ -89,7 +96,7 @@
             .container { margin: 15px auto; }
             .section { padding: 18px; }
             .email-card-container { padding: 20px 15px; }
-            .email-display-box { width: 100%; } /* Fluid scale on narrow screens */
+            .email-display-box { width: 100%; }
         }
     </style>
 </head>
@@ -104,9 +111,14 @@
         <div class="section">
             <h1>Contact the Archive</h1>
             <p>If you have historical photographs, videos, or questions regarding the old community forums, please reach out to the administrative team.</p>
+            
+            <!-- Your newly added access disclaimer block -->
+            <p class="notice-text">
+                Access to the now restricted areas of the website is strictly via invitation only, though most sections will be open to the public soon. Please note that requests for early system access will not receive a reply.
+            </p>
         </div>
 
-        <!-- RE-ENGINEERED DIRECT EMAIL DISPLAY CARD -->
+        <!-- DIRECT EMAIL DISPLAY CARD -->
         <div class="section">
             <h2>Direct Email</h2>
             <p>For all inquiries, media submissions, and archive requests:</p>

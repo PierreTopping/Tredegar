@@ -24,6 +24,9 @@
             margin-bottom: 25px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.3);
         }
+        .text-center {
+            text-align: center;
+        }
         h1, h2, h3 {
             color: #e0a96d;
             margin-top: 0;
@@ -32,22 +35,39 @@
             line-height: 1.7;
             color: #e0e1dd;
         }
-        .history-image-box {
-            text-align: center;
-            margin: 25px 0;
+        .dedication-box {
+            border-left: 4px solid #e0a96d;
+            background-color: rgba(224, 169, 109, 0.05);
+            padding: 15px 20px;
+            margin-top: 20px;
+            border-radius: 0 8px 8px 0;
         }
-        .history-image-box img {
-            max-width: 100%;
-            height: auto;
+        .dedication-title {
+            color: #e0a96d;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .archive-notice {
+            background-color: #415a77;
+            border: 1px solid #e0a96d;
+            padding: 20px;
             border-radius: 8px;
-            border: 2px solid #e0a96d;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            text-align: center;
+            margin-top: 40px;
         }
-        .image-caption {
-            font-size: 0.9rem;
-            color: #778da9;
-            margin-top: 8px;
-            font-style: italic;
+        .admin-btn {
+            display: inline-block;
+            background-color: #e0a96d;
+            color: #0d1b2a;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background 0.2s;
+        }
+        .admin-btn:hover {
+            background-color: #f0c99d;
         }
         .footer {
             text-align: center;
@@ -55,7 +75,6 @@
             font-size: 0.9rem;
             color: #778da9;
         }
-
         @media (max-width: 600px) {
             .container { margin: 15px auto; }
             .section { padding: 18px; }
@@ -64,35 +83,34 @@
 </head>
 <body>
 
-    <!-- THE DYNAMIC SHARED MENU INJECTS HERE -->
+    <!-- THE DYNAMIC MENU DROPS RIGHT HERE -->
     <div id="nav-placeholder"></div>
 
     <div class="container">
         
-        <!-- MAIN HEADER SECTION -->
+        <!-- MAIN ABOUT SECTION WITH DEDICATION -->
         <div class="section">
-            <h1>About Us</h1>
-            <p>Discover the passion, legacy, and community behind the digital preservation of Tredegar's rich heritage.</p>
-        </div>
-
-        <!-- OUR HISTORY SECTION -->
-        <div class="section">
-            <h2>Our History</h2>
-            <p>The Tredegar Digital Archive project first began its mission back in 1991. What started as a local initiative to collect physical documents, photographs, and oral histories from town residents has evolved over more than three decades into an expansive, dedicated digital preservation effort.</p>
-            <p>As the internet grew, so did our goals. We transitioned from localized physical backups to building an expansive server network capable of housing thousands of media pieces, industrial blueprints, and community logs, protecting the unique legacy of the Sirhowy Valley for generations to come.</p>
+            <h1>History of the Project</h1>
+            <p>This web-site was started back in 1999/2000 to hold historical data on the town of Tredegar, Monmouthshire, UK. Over the years, the site expanded into community forums and held over 10,000 images before closing down due to the hosting costs at the time.</p>
             
-            <!-- NINE ARCHES IMAGE BOX PLACED DIRECTLY BELOW -->
-            <div class="history-image-box">
-                <img src="Nine_Arches1.jpg" alt="The Nine Arches Viaduct, Tredegar - Historic Train Scene">
-                <div class="image-caption">The iconic Nine Arches viaduct in Tredegar, captured during the era of steam rail transport.</div>
+            <div class="dedication-box">
+                <div class="dedication-title">In Memory & Dedication</div>
+                <p style="margin: 0; font-style: italic; font-size: 0.95rem; color: #778da9;">
+                    This archive framework is affectionately dedicated to the memory of those who helped preserve Tredegar's vast history before us. Their data and passion live on in this digital vault.
+                </p>
             </div>
         </div>
 
-        <!-- OUR MISSION SECTION -->
-        <div class="section">
-            <h2>Our Mission</h2>
-            <p>Our core objective remains clear: to build, maintain, and expand an independent digital mirror of Tredegar. This includes historical records, localized business directories, and a space to support voluntary community activities.</p>
-            <p>By protecting these records from getting lost to time, we ensure that the industrial might, political contributions, and cultural humor of Tredegar continue to stand firmly as an inspiration for the future.</p>
+        <!-- RE-LAUNCH SECTION -->
+        <div class="section text-center">
+            <h2>Expanded Digital Research Archive</h2>
+            <p>The site is now being re-designed and re-structured to house the original data along with a massive amount of new documents, maps, and information that has been collected since the site closed down.</p>
+        </div>
+
+        <!-- SYSTEM ACCESS CALLOUT -->
+        <div class="archive-notice">
+            <p style="margin-top: 0;">Looking for deeper records? Thousands of fully digitized historic documents, rare town photographs, academic white papers, industrial charts, and vintage maps are preserved within our secure back-end environment.</p>
+            <a href="admin.html" class="admin-btn">System Access Login</a>
         </div>
 
     </div>
@@ -101,7 +119,7 @@
         <p>&copy; 2026 Tredegar Digital Archive Project. All Rights Reserved.</p>
     </div>
 
-    <!-- SHARED NAVIGATION LINK ENGINE -->
+    <!-- INJECT NAVIGATION & STYLES FROM COMPONENT FILE -->
     <script src="components.js"></script>
 
 </body>

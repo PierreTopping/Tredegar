@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech-Board Ltd — Historical Archive</title>
+    <style>
+        :root {
+            --bg-color: #12161a;
+            --card-bg: #1c232a;
+            --accent-red: #d9383a;
+            --text-main: #f0f4f8;
+            --text-muted: #a0aec0;
+            --border-color: #2d3748;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        header {
+            background-color: #0b0d10;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--accent-red);
+        }
+
+        .logo-area {
+            max-width: 500px;
+            margin: 0 auto 10px auto;
+            border: 2px solid #ffffff;
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .logo-title {
+            color: var(--accent-red);
+            font-family: "Georgia", serif;
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        .logo-sub {
+            color: #000000;
+            font-family: "Georgia", serif;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            border-top: 1px solid #000000;
+            margin-top: 5px;
+            padding-top: 5px;
+        }
+
+        .tagline {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: "▪";
+            color: var(--accent-red);
+        }
+
+        .file-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        @media (min-width: 600px) {
+            .file-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .file-card {
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 1px dashed var(--border-color);
+            border-radius: 6px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .file-name {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.9rem;
+            color: #4cd137;
+            font-weight: bold;
+            word-break: break-all;
+            margin-bottom: 6px;
+        }
+
+        .file-desc {
+            font-size: 0.88rem;
+            color: var(--text-main);
+        }
+
+        .file-meta {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        blockquote {
+            background: rgba(217, 56, 58, 0.1);
+            border-left: 4px solid var(--accent-red);
+            padding: 12px;
+            margin: 15px 0;
+            font-size: 0.9rem;
+            color: #e2e8f0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <div class="logo-title">Imperial</div>
+            <div class="logo-sub">Board Products Limited</div>
+        </div>
+        <div class="tagline">Tech-Board Corporate & Staff Asset Repository (1994 &ndash; 2002)</div>
+    </header>
+
+    <main>
+
+        <!-- SECTION 1 -->
+        <section id="media-launch">
+            <h2>1994 Media & Financial Launch</h2>
+            <blockquote>
+                Historical documentation commemorating the massive £40m financing, equity splits, and national press coverage driving the Ebbw Vale start-up venture.
+            </blockquote>
+            <div class="file-grid">
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">FTP1-19071994.GIF</div>
+                        <div class="file-desc">Financial Times clipping: "£40m Welsh plant is largest start-up venture" by Roland Adburgham & Richard Gourlay.</div>
+                    </div>
+                    <div class="file-meta">Type: Image Scan (FT)</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">FTP2-19071994.GIF</div>
+                        <div class="file-desc">Financial Times business section feature: "Juggling the finances" alongside corporate funding executive cartoon.</div>
+                    </div>
+                    <div class="file-meta">Type: Image Scan (FT)</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">Misc-Press-Cutting.GIF</div>
+                        <div class="file-desc">National news clipping by Roland Gribben: "UK hardboard wins £40m lift", detailing 3i group leadership and 200 jobs created.</div>
+                    </div>
+                    <div class="file-meta">Type: Newspaper Scan</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">tombstone.jpg</div>
+                        <div class="file-desc">Acrylic financial tombstone display commemorating the £35,149,000 Management Start-up framework managed via 3i plc.</div>
+                    </div>
+                    <div class="file-meta">Type: Color Photo</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">tombstone_2.jpg</div>
+                        <div class="file-desc">Alternative studio capture of the official 3i corporate start-up investment plaque.</div>
+                    </div>
+                    <div class="file-meta">Type: Color Photo</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2 -->
+        <section id="executive-profiles">
+            <h2>Executive Profiles & Team Rosters</h2>
+            <div class="file-grid">
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">The-Team.GIF</div>
+                        <div class="file-desc">Complete corporate portfolio layout introducing key leadership (Learmond, Graham, Read, Ellis, Spaven, Slater, Parrott).</div>
+                    </div>
+                    <div class="file-meta">Type: Document Graphics</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">lea.GIF</div>
+                        <div class="file-desc">Greyscale high-contrast portrait framing senior management against a light brick wall layout.</div>
+                    </div>
+                    <div class="file-meta">Type: Portrait Crop</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">mallcy.GIF</div>
+                        <div class="file-desc">Formal studio-lit profile framing a senior mustache-styled manager in suit and tie.</div>
+                    </div>
+                    <div class="file-meta">Type: Corporate Photo</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">ralph_hodge.jpg</div>
+                        <div class="file-desc">Formal executive headshot capture of corporate leadership team member.</div>
+                    </div>
+                    <div class="file-meta">Type: Greyscale Portrait</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">ted.GIF</div>
+                        <div class="file-desc">Isolated asset image profile matching Ted Ellis, Human Resources Manager.</div>
+                    </div>
+                    <div class="file-meta">Type: Document Extract</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">tony.GIF</div>
+                        <div class="file-desc">Isolated asset image profile matching Tony Read, Finance Director.</div>
+                    </div>
+                    <div class="file-meta">Type: Document Extract</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">sue.GIF</div>
+                        <div class="file-desc">On-site industrial plant portrait capture featuring Sue in her protective safety hard hat.</div>
+                    </div>
+                    <div class="file-meta">Type: Document Extract</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3 -->
+        <section id="infrastructure">
+            <h2>Plant Infrastructure & Operations</h2>
+            <div class="file-grid">
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">Rassau-Sign.GIF</div>
+                        <div class="file-desc">Welsh Development Agency sign log entry for the "Rassau Industrial Estate / Ystad Ddiwydiannol Rassau".</div>
+                    </div>
+                    <div class="file-meta">Type: Facility Graphic</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">imperial.JPG</div>
+                        <div class="file-desc">High-resolution brand signage print sample: "Imperial Board Products Limited" typography template.</div>
+                    </div>
+                    <div class="file-meta">Type: Logo Asset</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">sdf.JPG</div>
+                        <div class="file-desc">Interior industrial assembly snapshot featuring team members engineering the main facility pipelines.</div>
+                    </div>
+                    <div class="file-meta">Type: Operational Photo</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4 -->
+        <section id="social-history">
+            <h2>Staff Social History & Gatherings</h2>
+            <div class="file-grid">
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">group-1.JPG</div>
+                        <div class="file-desc">Summer event snapshot framing lawn sports with attendee carrying refreshment in foreground.</div>
+                    </div>
+                    <div class="file-meta">Type: Candid Photo</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">group-2.JPG</div>
+                        <div class="file-desc">Wide angle patio party capture showing company staff sitting out by lawn furniture enjoying social hour.</div>
+                    </div>
+                    <div class="file-meta">Type: Candid Photo</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">gs-pt-caz.JPG</div>
+                        <div class="file-desc">Lawn social capture tracking attendees gathered alongside PA audio setup.</div>
+                    </div>
+                    <div class="file-meta">Type: Candid Photo</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">security.JPG</div>
+                        <div class="file-desc">Five staff members sitting on an exterior building bench playing acoustic guitar.</div>
+                    </div>
+                    <div class="file-meta">Type: Candid Photo</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">trevor.JPG</div>
+                        <div class="file-desc">Indoor candid capture profiling team member Trevor serving behind a pub bar.</div>
+                    </div>
+                    <div class="file-meta">Type: Candid Photo</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">tw&jg.JPG</div>
+                        <div class="file-desc">Relaxed lawn snapshot profiling guests enjoying the afternoon shade on the grass.</div>
+                    </div>
+                    <div class="file-meta">Type: Candid Photo</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">twister-1.JPG</div>
+                        <div class="file-desc">Staff party activities snapshot tracking the team playing an outdoor game of Twister.</div>
+                    </div>
+                    <div class="file-meta">Type: Activity Log</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">twister-2.JPG</div>
+                        <div class="file-desc">Secondary dynamic angle of the ongoing outdoor garden event activities.</div>
+                    </div>
+                    <div class="file-meta">Type: Activity Log</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5 -->
+        <section id="admin">
+            <h2>HR & Administrative Archive</h2>
+            <div class="file-grid">
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">Inland-Rev.GIF</div>
+                        <div class="file-desc">Official UK Inland Revenue Form P45 trace for personnel tracking ending tax cycle 1998.</div>
+                    </div>
+                    <div class="file-meta">Type: Government Scan</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">Job-Seekers.GIF</div>
+                        <div class="file-desc">Correspondence copy issued via Tredegar Jobcentre (Gwent) dated April 1998.</div>
+                    </div>
+                    <div class="file-meta">Type: Government Scan</div>
+                </div>
+                <div class="file-card">
+                    <div>
+                        <div class="file-name">mrx2.jpg</div>
+                        <div class="file-desc">Office novelty item trace: Desk action figure photo log dated June 2002.</div>
+                    </div>
+                    <div class="file-meta">Type: Internal Oddity</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; Imperial Board Products Limited Archive &bull; Retrospective Digitalization</p>
+    </footer>
+
+</body>
+</html>
